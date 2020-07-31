@@ -1,0 +1,33 @@
+#Home{
+  background-image: url(../images/background.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  background-repeat: no-repeat center center fixed;
+  color: white;
+  position: relative;
+}
+#Home img{
+  float: left;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  cursor: pointer; 
+}
+
+  .img{
+  opacity: 1;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+
+
+}
