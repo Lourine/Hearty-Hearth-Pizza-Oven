@@ -81,4 +81,8 @@ $(document).ready(function(event) {
     $("#pizza-details-dropdown").click(function() {
       $("#pizza-details").toggle();
     });
-  
+  ///Checkout Btn
+  $("#checkout-btn").click(function() {
+    location.reload();
+  });
+});
