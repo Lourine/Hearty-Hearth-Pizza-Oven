@@ -74,24 +74,24 @@
                   <div class="column">
                     <p>Size</p>
                     <select required class="form-control" id="size">
-                      <option value="Small 10 in.">Small, 10"</option>
-                      <option value="Medium 14 in.">Medium, 14"</option>
-                      <option value="Large 18 in.">Large, 18"</option>
+                      <option value="Small Ksh 500">Small, Ksh 500"</option>
+                      <option value="Medium Ksh 800">Medium, Ksh 800</option>
+                      <option value="Large Ksh 1000">Large, Ksh 1000</option>
                     </select>
                   </div>
                   <div class="column">
                     <p>Crust</p>
                     <select required class="form-control" id="crust">
-                      <option value="crispy">Crispy</option>
-                      <option value="stuffed">Stuffed</option>
-                      <option value="gluten-free">Gluten-Free</option>
+                      <option value="crispy">Crispy, Ksh 100</option>
+                      <option value="stuffed">Stuffed,Ksh 50</option>
+                      <option value="gluten-free">Gluten-Free Ksh150</option>
                     </select>
                   </div>
                 </div>
                 <div class="row">
                   <div class="column">
                     <p>Veggie 1</p>
-                    <select required class="form-control" id="veggie1">
+                    <select  class="form-control" id="veggie1">
                       <option></option>
                       <option value="onions">Onions</option>
                       <option value="green peppers">Green Peppers</option>
@@ -102,7 +102,7 @@
                   </div>
                   <div class="column">
                     <p>Veggie 2</p>
-                    <select required class="form-control" id="veggie2">
+                    <select class="form-control" id="veggie2">
                       <option></option>
                       <option value="caramelized spring onions">Caramelized Onions</option>
                       <option value="balsamic mushrooms">Balsamic Mushrooms</option>
@@ -113,7 +113,7 @@
                   </div>
                   <div class ="column">
                     <p>Meat </p>
-                    <select required class="form-control" id="meat">
+                    <select class="form-control" id="meat">
                       <option></option>
                       <option value="chicken">Chicken</option>
                       <option value="pepperoni">Pepperoni</option>
@@ -142,6 +142,7 @@
           </div>
           <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
           <h3><span id="delivery-option"></span></h3>
+          <p id="customer-cost"></p>
         </div>
       </div>
     </div>
