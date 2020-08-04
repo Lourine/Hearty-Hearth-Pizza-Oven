@@ -16,6 +16,14 @@
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
  <script src="js/scripts.js"></script>
  <title>Pizza Order</title>
+ <div class ="nav">
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li> 
+      <li><a href="form.html">PLACE  ORDER</a></li>
+     </ul>
+   </nav>
+ </div>
   </head>
   <body>
 
@@ -89,7 +97,7 @@
                 </div>
                 <div class="row">
                 <div class="column">
-                   <p>Veggie 1 (+$1)</p>
+                   <p>Veggie 1</p>
                    <select required class="form-control" id="veggie1">
                     <option></option>
                     <option value="onions">Onions</option>
@@ -128,15 +136,16 @@
             </div>
           </div>
           </form>
-<!-- Custom Pizza Form End -->
         </div>
+        <!-- Custom Pizza Form End -->
         
 <!-- Cart Start -->
-        <div class="col-xs-4" id="price-content">
+        <div id="price-content">
           <h3 class="page-header">Cart</h3>
           <h2>Price: $ <span id="final-cost"></span></h2>
           <div id="order-details">
-            <p><a id="pizza-details-dropdown">Custom Pizza</a></p>
+            <p><a id="pizza-details-dropdown"><strong>Custom Pizza</strong></a></p>
+            <p><strong>Once you make your order, click on Custom Pizza to see the details of your order</strong></p>
             <ul id="pizza-details"></ul>
           </div>
           <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
