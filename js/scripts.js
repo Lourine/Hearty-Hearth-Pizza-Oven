@@ -1,30 +1,29 @@
 // Business Logic
 var totalPriceArray = []; //Only global variable in code
 function Order (flavor,customSize, crust) {
-  this.flavor=5;
+  this.flavor=[];
   this.customSize = customSize;
   this.crust = crust;
-  this.veggie1 = 1;
-  this.veggie2 = 1;
-  this.meat = 2;
+  this.veggie1 = 100;
+  this.veggie2 = 150;
+  this.meat = 200;
   this.pizzaPrice = 0;
 }
 Order.prototype.pizzaCost = function () {
-  if (this.customSize === "Small 10 in.") {
-    this.pizzaPrice += 6;
-  } else if (this.customSize === "Medium 14 in.") {
-    this.pizzaPrice += 9;
-  } else if (this.customSize === "Large 18 in.") {
-    this.pizzaPrice += 12;
+  if (this.customSize === "Small Ksh 500") {
+    this.pizzaPrice += 500;
+  } else if (this.customSize === "Medium Ksh 800") {
+    this.pizzaPrice += 800;
+  } else if (this.customSize === "Large Ksh 1000") {
+    this.pizzaPrice += 1000;
   }
   if (this.crust === "crispy") {
-    this.pizzaPrice += 1;
+    this.pizzaPrice += 100;
   } else if (this.crust === "stuffed") {
-    this.pizzaPrice += 0.5;
+    this.pizzaPrice += 50;
   } else if (this.crust === "gluten-free") {
-    this.pizzaPrice += 1.5;
+    this.pizzaPrice += 150;
   }
-  this.pizzaPrice += this.flavor;
   this.pizzaPrice += this.veggie1;
   this.pizzaPrice += this.veggie2;
   this.pizzaPrice += this.meat;
@@ -32,10 +31,11 @@ Order.prototype.pizzaCost = function () {
 }
 Order.prototype.finalCost = function () {
   var cartTotalPrice = 0;
+  var deliveryPrice=3;
   for (var arrayElement = 0; arrayElement < totalPriceArray.length; arrayElement ++) {
     cartTotalPrice += totalPriceArray[arrayElement]; 
   }
-  return cartTotalPrice;
+  return cartTotalPrice +deliveryPrice;
 }
 function Address (address) {
   this.address =address;
