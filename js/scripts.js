@@ -31,7 +31,7 @@ Order.prototype.pizzaCost = function () {
 }
 Order.prototype.finalCost = function () {
   var cartTotalPrice = 0;
-  var deliveryPrice=3;
+  var deliveryPrice=300;
   for (var arrayElement = 0; arrayElement < totalPriceArray.length; arrayElement ++) {
     cartTotalPrice += totalPriceArray[arrayElement]; 
   }
@@ -58,7 +58,8 @@ $(document).ready(function(event) {
       var newAddress = new Address(address)
       $("#order-content").show();
       $("#landing-content").hide();
-      $("#delivery-option").text("Your Pizza will be delivered to: " + newAddress.deliveryAddress+ "."+""+"It will cost you an extra $3");
+      $("#delivery-option").text("Your Pizza will be delivered to: " + newAddress.deliveryAddress);
+      alert("Delivery will cost you Ksh 300");
     });
     $("form#custom-pizza").submit(function(event) {
       event.preventDefault();
