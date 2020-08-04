@@ -1,5 +1,5 @@
-# DELANI STUDIO
-#### Delani Studio Website
+# HEARTY-HEARTH -PIZZA-OVEN
+#### Hearty-Hearth Pizza Oven Online Delivery Site
 #### By **Lourine Millicent**
 ## Description
 This is a weba web application where your customers order different sizes of pizzas with one or more toppings. They are able to input their name and adress and receive a total amount they are expected to pay. The web application also allows one to order more than one pizza. 
