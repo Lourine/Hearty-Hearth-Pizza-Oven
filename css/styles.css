@@ -51,16 +51,19 @@ html, body{
   background-color: bisque;
 
 }
+
+/*<--------------------Content Styling---------------->*/
+
 #landing-content {
-  color: #000000;
-  background-color: #FFFFFF;
+  color: black;
+  background-color:bisque;
   text-align: center;
 }
 
 #order-content {
   display: none;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color:bisque;
   margin-top: 100px;
   margin-bottom: 100px;
   text-align: center;
@@ -131,12 +134,9 @@ html, body{
 
 #custom-pizza {
   /*display: none;*/
-  border-style: solid;
-  border-color: #006699;
-  background-color: #006699;
-  border-radius: 15%;
-  margin-left: 70px;
-  margin-right: 70px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
 }
 
 select {
