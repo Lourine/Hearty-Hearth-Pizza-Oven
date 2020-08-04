@@ -43,7 +43,6 @@ function Address (address) {
 }
 //User Interface Logic
 $(document).ready(function(event) {
-  /////Landing Page Btns
     $("#pickup-btn").click(function() {
       $("#order-content").show();
       $("#landing-content").hide();
@@ -59,7 +58,7 @@ $(document).ready(function(event) {
       var newAddress = new Address(address)
       $("#order-content").show();
       $("#landing-content").hide();
-      $("#delivery-option").text("Your Pizza will be delivered to: " + newAddress.deliveryAddress);
+      $("#delivery-option").text("Your Pizza will be delivered to: " + newAddress.deliveryAddress+ "."+""+"It will cost you an extra $3");
     });
     $("form#custom-pizza").submit(function(event) {
       event.preventDefault();
@@ -77,11 +76,13 @@ $(document).ready(function(event) {
       $("#final-cost").text(newPizzaOrder.finalCost());
       $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
       $("# flavor #size, #crust, #veggie1, #veggie2, #meat").val("");
+    
+
     });
     $("#pizza-details-dropdown").click(function() {
       $("#pizza-details").toggle();
     });
-  ///Checkout Btn
+  //Checkout Btn
   $("#checkout-btn").click(function() {
     location.reload();
   });
