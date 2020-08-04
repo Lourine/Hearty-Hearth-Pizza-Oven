@@ -39,8 +39,8 @@
           <div class="row">
               <label for="first-name">First Name</label><br>
               <input required type="text" class="form-control address-spacing">
-              <label for="">Last Name</label>
-              <input required type="text" class="form-control address-spacing">
+              <label for="">Email</label>
+              <input required type="email" class="form-control address-spacing">
               <div class="row"></div><div class="col-xs-6">
               <label for="address">Address</label>
               <input required type="text" class="form-control" id="add">
@@ -111,7 +111,7 @@
                   <p>Veggie 2</p>
                   <select required class="form-control" id="veggie2">
                     <option></option>
-                    <option value="caramelized spring onions">Onions</option>
+                    <option value="caramelized spring onions">Caramelized Onions</option>
                     <option value="balsamic mushrooms">Balsamic Mushrooms</option>
                     <option value="brocolli">Brocolli</option>
                     <option value="zuchinni">Zuchinni</option>
@@ -131,11 +131,15 @@
                 </div>
                 <div class="row">
                   <button type="submit" class="btn btn-danger" id="submit-custom-pizza">Place Order</button>
+                  
                 </div>
               </div>
             </div>
           </div>
           </form>
+          <p><strong>You can place as many orders as you wish. Click on Custom Pizza to view your orders</strong></p><br>
+  
+        
         </div>
         <!-- Custom Pizza Form End -->
         
@@ -145,7 +149,7 @@
           <h2>Price: $ <span id="final-cost"></span></h2>
           <div id="order-details">
             <p><a id="pizza-details-dropdown"><strong>Custom Pizza</strong></a></p>
-            <p><strong>Once you make your order, click on Custom Pizza to see the details of your order</strong></p>
+            
             <ul id="pizza-details"></ul>
           </div>
           <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
