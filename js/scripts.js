@@ -10,13 +10,15 @@ function Order (customSize, crust) {
   this.pizzaPrice = 0;
 }
 Order.prototype.pizzaCost = function () {
-  if (this.customSize === "Small Ksh 100") {
+  this.customSize=document.getElementById("size").value;
+  if (this.customSize === "Small-Ksh-100") {
     this.pizzaPrice += 100;
-  } else if (this.customSize === "Medium Ksh 200") {
+  } else if (this.customSize === "Medium-Ksh-200") {
     this.pizzaPrice += 200;
-  } else if (this.customSize === "Large Ksh 300") {
+  } else if (this.customSize === "Large-Ksh-300") {
     this.pizzaPrice += 300;
   }
+  this.crust=document.getElementById("crust").value;
   if (this.crust === "crispy") {
     this.pizzaPrice += 100;
   } else if (this.crust === "stuffed") {
@@ -24,6 +26,7 @@ Order.prototype.pizzaCost = function () {
   } else if (this.crust === "gluten-free") {
     this.pizzaPrice += 150;
   }
+  console.log(this.pizzaPrice);
   this.pizzaPrice += this.flavor;
   this.pizzaPrice += this.veggie1;
   this.pizzaPrice += this.veggie2;
