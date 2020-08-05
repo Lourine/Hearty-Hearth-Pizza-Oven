@@ -74,9 +74,9 @@
                   <div class="column">
                     <p>Size</p>
                     <select required class="form-control" id="size">
-                      <option value="Small Ksh 500">Small, Ksh 500"</option>
-                      <option value="Medium Ksh 800">Medium, Ksh 800</option>
-                      <option value="Large Ksh 1000">Large, Ksh 1000</option>
+                      <option value="Small Ksh 100">Small, Ksh 100"</option>
+                      <option value="Medium Ksh 200">Medium, Ksh 200</option>
+                      <option value="Large Ksh 300">Large, Ksh 300</option>
                     </select>
                   </div>
                   <div class="column">
@@ -131,18 +131,19 @@
         </form>
          <p><strong>You can place as many orders as you wish. Click on Custom Pizza to view your orders</strong></p><br>
         </div>
+        <div id="order-details">
+          <p><a id="pizza-details-dropdown"><strong>Custom Pizza</strong></a></p>
+          <ul id="pizza-details"></ul>
+        </div>
         <!-- Custom Pizza Form End -->
         <!-- Cart Start -->
         <div id="price-content">
-          <h3 class="page-header">Cart</h3>
-          <h2>Price: $ <span id="final-cost"></span></h2>
-          <div id="order-details">
-            <p><a id="pizza-details-dropdown"><strong>Custom Pizza</strong></a></p>
-            <ul id="pizza-details"></ul>
-          </div>
-          <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
+          <h4>Order Price: Ksh <span id="order-cost"></span></h4>
+          <h2 class="page-header">Amount Due</h2>
+          <h3>Total order amount +Delivery Cost: Ksh <span id="final-cost"></span></h3>
           <h3><span id="delivery-option"></span></h3>
-          <p id="customer-cost"></p>
+          <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
+         
         </div>
       </div>
     </div>

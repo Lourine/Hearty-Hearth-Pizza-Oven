@@ -1,7 +1,7 @@
 // Business Logic
 var totalPriceArray = []; //Only global variable in code
-function Order (flavor,customSize, crust) {
-  this.flavor=[];
+function Order (customSize, crust) {
+  this.flavor=500;
   this.customSize = customSize;
   this.crust = crust;
   this.veggie1 = 100;
@@ -10,12 +10,12 @@ function Order (flavor,customSize, crust) {
   this.pizzaPrice = 0;
 }
 Order.prototype.pizzaCost = function () {
-  if (this.customSize === "Small Ksh 500") {
-    this.pizzaPrice += 500;
-  } else if (this.customSize === "Medium Ksh 800") {
-    this.pizzaPrice += 800;
-  } else if (this.customSize === "Large Ksh 1000") {
-    this.pizzaPrice += 1000;
+  if (this.customSize === "Small Ksh 100") {
+    this.pizzaPrice += 100;
+  } else if (this.customSize === "Medium Ksh 200") {
+    this.pizzaPrice += 200;
+  } else if (this.customSize === "Large Ksh 300") {
+    this.pizzaPrice += 300;
   }
   if (this.crust === "crispy") {
     this.pizzaPrice += 100;
@@ -24,10 +24,18 @@ Order.prototype.pizzaCost = function () {
   } else if (this.crust === "gluten-free") {
     this.pizzaPrice += 150;
   }
+  this.pizzaPrice += this.flavor;
   this.pizzaPrice += this.veggie1;
   this.pizzaPrice += this.veggie2;
   this.pizzaPrice += this.meat;
   return this.pizzaPrice;
+}
+Order.prototype.orderCost = function () {
+  var orderTotalPrice = 0;
+  for (var arrayElement = 0; arrayElement < totalPriceArray.length; arrayElement ++) {
+    orderTotalPrice += totalPriceArray[arrayElement]; 
+  }
+  return orderTotalPrice ;
 }
 Order.prototype.finalCost = function () {
   var cartTotalPrice = 0;
@@ -74,6 +82,7 @@ $(document).ready(function(event) {
       newPizzaOrder.pizzaCost();
       totalPriceArray.push(newPizzaOrder.pizzaPrice);
       $("#pizza-details-dropdown").show();
+      $("#order-cost").text(newPizzaOrder.orderCost())
       $("#final-cost").text(newPizzaOrder.finalCost());
       $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
       $("# flavor #size, #crust, #veggie1, #veggie2, #meat").val("");
